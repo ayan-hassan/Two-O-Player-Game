@@ -1,0 +1,32 @@
+Create a 2-Player math game where players take turns to answer simple math addition problems. A new math question is generated for each turn by picking two numbers between 1 and 20. The player whose turn it is is prompted the question and must answer correctly or lose a life.
+
+Both players start with 3 lives. They lose a life if they mis-answer a question. At the end of every turn, the game should output the new scores for both players, so players know where they stand.
+
+The game doesn’t end until one of the players loses all their lives. At this point, the game should announce who won and what the other player’s score is.
+
+Potential Classes:
+  - players: will hold player data and their scores/lives
+  - mathProblems: hold questions and answers, game loop, 
+Methods:
+  add/subtract points: if response != answer subtract 1 point from score. Once score = 0, exit game; parameter is user response
+  calculate answer: add two inputted number from 1 - 20 (validate that it's within range as well); parameter are two numbers chosen, output is answer
+
+  random number generator: 
+
+EXAMPLE prompt
+
+  Player 1: What does 5 + 3 equal?
+  > 9
+  Player 1: Bruh WTF? 
+  P1: 2/3 VS P2: 3/3
+  ----- NEW TURN -----
+  Player 2: What does 2 + 6 equal?
+  > 8
+  Player 2: YESSIR
+  P1: 2/3 vs P2: 3/3
+
+  ----- NEW TURN -----
+  ... some time later ...
+  Player 1 wins with a score of 1/3
+  ----- GAME OVER -----
+  Byeeeeeee!
