@@ -1,21 +1,21 @@
-class mathProblems
+class MathProblems
 
-  attr_accessor :current_question, :correct_answer
+  attr_accessor :correct_answer
 
   def initialize
-    @current_question = nil
-    @correct_answer = nil
+    @correct_answer = -1
   end
-
-  def question
+  
+  def show_question
+    num = Random.new
     num1 = rand 1...20
     num2 = rand 1...20
-    answer(num1, num2)
-    @current_question "Player 1: What does #{randomNumber1} + #{randomNumber2} equal?"
+    @correct_answer = num1 + num2
+    "What does #{num1} + #{num2} equal?"
   end
 
-  def answer(num1, num2)
-    @correct_answer = num1 + num2
+  def isGuessCorrect(guess)
+    guess == @correct_answer
   end
   
 end
